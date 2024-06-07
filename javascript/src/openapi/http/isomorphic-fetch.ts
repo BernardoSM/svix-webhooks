@@ -36,8 +36,7 @@ export class IsomorphicFetchHttpLibrary implements HttpLibrary {
         return fetch(request.getUrl(), {
             method: method,
             body: body as any,
-            headers: request.getHeaders(),
-            credentials: "same-origin"
+            headers: request.getHeaders()
         }).then((resp: any) => {
             const headers: { [name: string]: string } = {};
             resp.headers.forEach((value: string, name: string) => {
